@@ -5,6 +5,10 @@
     font-family: 'Poppins', cursive, sans-serif;
 }
 
+#clickMe{
+    cursor: pointer;
+}
+
 /* Đối với thiết bị di động */
 @media screen and (max-width: 574px) {
     .greetings {
@@ -80,6 +84,21 @@ body{
 }
 .greetings > span:nth-child(9){
     animation-delay: 1.6s;
+}
+.greetings > span:nth-child(10){
+    animation-delay: 1.8s;
+}
+.greetings > span:nth-child(11){
+    animation-delay: 2.0s;
+}
+.greetings > span:nth-child(12){
+    animation-delay: 2.2s;
+}
+.greetings > span:nth-child(13){
+    animation-delay: 2.4s;
+}
+.greetings > span:nth-child(14){
+    animation-delay: 2.6s;
 }
 
 .description{

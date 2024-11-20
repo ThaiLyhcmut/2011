@@ -12,30 +12,38 @@
 </head>
 
 <body>
-    
-    <audio id="background-audio" muted loop autoplay>
-        <source src="./NoiGioacuteRoi-ChauThamZhouShen-6330139.mp3">
+
+    <audio id="background-audio" muted autoplay>
+        <source src="./nhac20_11.mp3">
     </audio>
     <div class="greetings">
         <!-- silahkan menambah kata sesuai keinginan dengan <span>text...</span -->
 
+        <span id="letter">T</span>
+        <span id="letter">H</span>
+        <span id="letter">A</span>
+        <span id="letter">N</span>
+        <span id="letter">K</span>
+
+        <span style="margin-right: 20px;"></span>
+
         <span id="letter">Y</span>
         <span id="letter">O</span>
         <span id="letter">U</span>
-        <span id="letter">'</span>
-        <span id="letter">R</span>
-        <span>E</span>
 
         <span style="margin-right: 20px;"></span>
         <span id="letter">M</span>
-        <span>Y</span>
-
+        <span id="letter">I</span>
+        <span id="letter">S</span>
+        <span id="letter">S</span>
+        
+        <span style="margin-right: 20px;"></span>
         <span style="margin-right:4pt;"></span>
         <br class="mobile-break">
 
         <span id="letter">
             <a href="" id="pp_letter" class="typewrite" data-period="2000"
-                data-type='[ "FLOWER", "SUNSHINE", "LOVE","QUEEN" ,"SWEET","INSPIRATION","JEWEL" ]'>
+                data-type='[ "TEACHER", "GUIDE", "INSPIRATION", "MOTIVATOR", "FRIEND", "HERO" ]'>
                 <script>
                     var TxtType = function (el, toRotate, period) {
                         this.toRotate = toRotate;
@@ -105,18 +113,39 @@
         <span id="letter">R</span> -->
 
     </div>
-    
+
     <div id="typedtext" class="csstext">
-        <div id="clickMe">click vao man hinh</div>
+        <div id="clickMe">Cô Quế Anh click vào đây</div>
         <script>
             var aText = new Array(
-                "20.10.2024 Ngày Phụ Nữ Việt Nam",
-                "Chúc em luôn xinh đẹp, mạnh khỏe và hạnh phúc.",
-                "Chúc em luôn được yêu thương và che chở",
+                "20.11.2024 Ngày Nhà giáo Việt Nam",
+                "Em chúc luôn xinh đẹp, mạnh khỏe và hạnh phúc.",
                 "Tìm được những niềm vui và hạnh phúc trong cuộc sống",
-                "Và luôn bên anh, người mà em yêu thương nhất <3"
+                "lyric: ",
+                "Hình như em có điều muốn nói",
+                "Thế thì mày cứ nói",
+                "Và có lẽ em cũng biết rằng tất cả đang chờ đợi",
+                "Ngày hôm nay là ngày thầy giáo, Cũng là ngày cô giáo",
+                "Lớp chế 1 bài nhạc để tặng cô, Mong cô bình tĩnh lắng nghe",
+                "Một là em chúc cô luôn xinh tươi như đôi mươi",
+                "Hai là em chúc cho thầy luôn khỏe yêu đời!",
+                "Và chúng em mong cho",
+                "Thầy cô luôn",
+                "...",
+                "1 2 3 năm sau vẫn giữ phong độ đỉnh cao",
+                "Lớp em học hành lười biếng hay than vãn trách móc kêu ca",
+                "Lắm khi bạn bè vui quá có hơi mất trật tự trong giờ",
+                "Và chúng em hôm nay đứng ngay đây",
+                "Thầm mong cô sẽ không trách móc lớp vì bọn em",
+                "Xin lỗi cô ạ!",
+                "Sau này em hứa sẽ rất rất chăm ngoan nhé cô",
+                "Em sẽ im lặng trong lớp, lắng nghe tốt, tích cực chép bài",
+                "Và chúng em mong cô hiểu cho em rằng",
+                "Làm được hay không em không hứa trước điều gì đâu",
+                "Yêu cô"
             );
             var iSpeed = 100; // time delay of print out
+            var iTime = 500
             var iIndex = 0; // start printing array at this posision
             var iArrLength = aText[0].length; // the length of the text array
             var iScrollAt = 20; // start scrolling up at this many lines
@@ -126,6 +155,27 @@
             var iRow; // initialise current row
 
             function typewriter() {
+                if (iIndex == 3) {
+                    iSpeed = 70
+                    iTime = 300
+                }
+                if (iIndex == 8) {
+                    iSpeed = 80
+                }
+                if (iIndex == 16) {
+                    iSpeed = 70
+                }
+                if (iIndex == 19) {
+                    iSpeed = 80
+                    iTime = 2000
+                }
+                if (iIndex == 20) {
+                    iSpeed = 80
+                    iTime = 300
+                }
+                if (iIndex == 23) {
+                    iTime = 3500
+                }
                 sContents = ' ';
                 iRow = Math.max(0, iIndex - iScrollAt);
                 var destination = document.getElementById("typedtext");
@@ -139,35 +189,32 @@
                     iIndex++;
                     if (iIndex != aText.length) {
                         iArrLength = aText[iIndex].length;
-                        setTimeout("typewriter()", 500);
+                        setTimeout("typewriter()", iTime);
                     }
                 } else {
                     setTimeout("typewriter()", iSpeed);
                 }
             }
 
-            
+
             window.addEventListener('load', () => {
                 const audio = document.getElementById('background-audio');
-                const click = document.getElementById("clickMe")
+                const click = document.getElementById("clickMe");
+
                 // Bật âm thanh khi người dùng click
                 const enableAudio = () => {
                     audio.muted = false; // Bật âm thanh
                     audio.play(); // Phát âm thanh
-                    document.removeEventListener('click', enableAudio); // Gỡ bỏ sự kiện sau lần đầu
-                    document.removeEventListener('click', typewriter);
+                    click.classList.add("hidden"); // Ẩn nút click
+                    typewriter(); // Bắt đầu hiệu ứng typewriter
                 };
-                
-                // Gán sự kiện click để bật âm thanh
-                document.addEventListener('click', () => {
-                    click.classList.add("hidden")
-                    enableAudio()
-                    typewriter();
-                    
-                });
+
+                // Gán sự kiện click chỉ chạy một lần
+                document.addEventListener('click', enableAudio, { once: true });
             });
+
             // set up text to print, each item in array is new line
-            
+
         </script>
 
 
