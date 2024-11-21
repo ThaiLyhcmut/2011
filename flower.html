@@ -124,11 +124,25 @@
       window.parent.postMessage("resize", "*");
 
     }
+    window.addEventListener('load', () => {
+                const audio = document.getElementById('background-audio');
 
+                // Bật âm thanh khi người dùng click
+                const enableAudio = () => {
+                    audio.muted = false; // Bật âm thanh
+                    audio.play(); // Phát âm thanh
+                };
+
+                // Gán sự kiện click chỉ chạy một lần
+                document.addEventListener('click', enableAudio, { once: true });
+            });
   </script>
 </head>
 
 <body class="container" translate="no">
+  <audio id="background-audio" muted autoplay>
+    <source src="./NoiGioacuteRoi-ChauThamZhouShen-6330139.mp3">
+  </audio>
   <div class="thaily">
     <canvas class="webgl" data-engine="three.js r135" width="682" height="157"
       style="width: 682px; height: 157px;"></canvas>
