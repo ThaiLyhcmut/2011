@@ -49,7 +49,7 @@ body{
     text-align: center;
 }
 .greetings > span{
-    animation: glow 2.5s ease-in-out infinite;
+    animation: glow 3.0s ease-in-out infinite;
 }
 @keyframes glow{
     0%, 100%{

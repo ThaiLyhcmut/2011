@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="css/main.css">
   <link rel="icon" href="img/flowers.png" type="image/x-icon">
-  <title>flowers</title>
+  <title>Flowers</title>
   <style>
     * {
 
@@ -581,8 +581,8 @@
               uTex: {
   
                 value: new THREE.TextureLoader().load(
-  
-                  "https://assets.codepen.io/74321/heart.png")
+                  "https://assets.codepen.io/74321/heart.png"
+                )
               }
             },
   
@@ -714,8 +714,8 @@
         async addModel() {
   
           this.model = await this.loadObj(
-  
-            "https://assets.codepen.io/74321/heart.glb");
+            "https://assets.codepen.io/74321/heart.glb"
+          );
   
           this.model.scale.set(0.01, 0.01, 0.01);
   
